@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//Mixins
+
+@mixin extendedLink {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgPosition {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin textShadow {
+    text-shadow: 0 0 8px $main;
+}
+
+@mixin textShadowHover {
+    text-shadow: 0 0 20px rgba($main, 0);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      text-shadow: 0 0 20px rgba($main, 1);
+    }
+}
+@mixin starCardsHeader {
+    @font-face {
+        font-family: 'Star Jedi';
+        src: url('../../assets/fonts/starjedi/Starjedi.ttf');
+    }   
+    font-family: 'Star Jedi';
+    font-size: 50px;
+    color: $main;
+    text-align: center;
+}
+
+@mixin starJediFont {
+    @font-face {
+        font-family: 'Star Jedi';
+        src: url('../../assets/fonts/starjedi/Starjedi.ttf');
+    }
+    font-family: 'Star Jedi';
+}
+
+@mixin norwesterFont {
+    @font-face {
+        font-family: 'Norwester';
+        src: url('../../assets/fonts/norwester/norwester.otf');
+    }
+    font-family: 'Norwester';
+}
+@mixin starJediHolFont {
+    @font-face {
+        font-family: 'Star Jedi Hol';
+        src: url('../../assets/fonts/starjedi/Starjhol.ttf');
+    }
+    font-family: 'Star Jedi Hol';
+}
+@mixin introSubheader {
+    @font-face {
+        font-family: 'Norwester';
+        src: url('../../assets/fonts/norwester/norwester.otf');
+    }
+    font-size: 20px;
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-family: 'Norwester';
+}
+// Variables
+
+$main: gold;
+$card-secondary-color: $main;
+$footer-text-color: red;

@@ -1,0 +1,88 @@
+@import '@/assets/styles/_style.scss';
+  @font-face {
+    font-family: 'Star Jedi';
+    src: url('../../assets/fonts/starjedi/Starjedi.ttf');
+  }
+  @font-face {
+    font-family: 'Star Jedi Hol';
+    src: url('/fonts/starjedi/Starjhol.ttf');
+  }
+  @font-face {
+  font-family: 'Norwester';
+  src: url('../../assets/fonts/norwester/norwester.otf');
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    height: 100%;
+  }
+  @for $i from 1 through 10 {
+  li:nth-child(3n + #{$i}) {
+    .card__img-power::before {
+      content: '#{$i}';
+    }
+    .card__img-wrapper {
+      background-image: url(../../assets/img/people/People#{$i}.png),
+      linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(86,148,255,1) 100%);
+    }
+  }
+  }
+  .card {
+    border-radius: 20px;
+    position: relative;
+    background-color: #000000;
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    border: 2px solid $main;
+
+    &__info {
+      color: $main;
+      font-family: 'Norwester';
+      &-name {
+        font-family:'Star Jedi';
+       font-size: 16px;
+        text-align: center;
+        @include textShadow;
+      }
+      &-stats {
+        padding: 10px 0 0 10px;
+      }
+    }
+    &__img {
+      &-wrapper {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 70%;
+        @include bgPosition;
+        position: relative;
+        border-bottom: 2px solid $card-secondary-color;
+      }
+      &-power::before {
+        @include flexCenter;
+        height: 40px;
+        width: 40px;
+        border-radius: 50% 0 0 0;
+        background-color: $card-secondary-color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-family:'Star Jedi Hol';
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: $main;
+    font-family: 'Star Jedi';
+    font-weight: 300;
+    text-align: center;
+    @include textShadow;
+  }
