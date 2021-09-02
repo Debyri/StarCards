@@ -1,12 +1,16 @@
 <template>
-  <div>
-    Stay tuned
-  </div>
+  <div><ComingSoonEl/></div>
 </template>
 
 <script>
+
+import ComingSoonEl from '@/components/sections/ComingSoonEl.vue';
+
 export default {
   name: 'ComingSoon',
+  components: {
+    ComingSoonEl,
+  },
   created() {},
   data() {
     return {};
@@ -16,4 +20,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
