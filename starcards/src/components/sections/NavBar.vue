@@ -44,13 +44,23 @@ export default {
       font-size: 18px;
       padding: 10px 10px;
       color: $main;
-      text-shadow: 0 0 20px rgba($main, 0);
-      @include textShadowHover;
+      // text-shadow: 0 0 20px rgba($main, 0);
+      border: 2px solid rgba($main, 0);
+      border-radius: 4px;
+      // @include textShadowHover;
+      box-shadow: inset 0 0 10px rgba($main, 0);
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        border: 2px solid rgba($main, 1);
+        box-shadow: inset 0 0 10px rgba($main, 0.7);
+      }
     }
 
     &__router-link {
       text-decoration: none;
       color: $main;
+      border: 2px solid main;
     }
   }
 </style>

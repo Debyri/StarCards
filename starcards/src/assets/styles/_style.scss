@@ -29,7 +29,7 @@
 
 @mixin textShadowHover {
     text-shadow: 0 0 20px rgba($main, 0);
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     &:hover {
       text-shadow: 0 0 20px rgba($main, 1);
